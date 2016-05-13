@@ -11,4 +11,4 @@ class Image(models.Model):
 		return self.title
 
 	def get_absolute_url(self):
-		return "/news/%s" % (self.news_date.strftime('%Y%m%d') + '-' + str(self.id))
+		return "/image/%s" % (self.news_date.strftime('%Y%m%d') + '-' + str(self.id))

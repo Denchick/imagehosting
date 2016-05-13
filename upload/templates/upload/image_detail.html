@@ -1,0 +1,12 @@
+    {% extends 'upload/base.html' %}
+
+    {% block content %}
+        <hr />
+        <article>
+            <h1>{{ image.title }}</h1>
+            <p><img src="/media/{{ image.upload }}" alt="{{ image.title }}" /></p>
+            {% if image.created_date %}
+                <time datetime="{{ image.created_date }}">{{ image.created_date }}</time>
+            {% endif %}
+        </article>
+    {% endblock %}
